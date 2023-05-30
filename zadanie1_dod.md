@@ -14,9 +14,11 @@ Sprawdzenie stanu builder-a ```docker buildx inspect --bootstrap```
 ![Screen](zad1_dod_1.JPG)
 
 Nie udalo sie stworzyc obrazu dla linux/arm/v7 (po 30min dalej tworzy sie obraz dla tej architektury). Polecenie aby stworzyc obraz na 3 architektury: 
+
 ```docker buildx build -t docker.io/piter27t/zad1_dod --platform linux/amd64,linux/arm64/v8,linux/arm/v7 --push .```
 
 Zbudowanie obrazow dla dwoch architektur (linux/arm64/v8 oraz linux/amd64):
+
 ```docker buildx build -t docker.io/piter27t/zad1_dod --platform linux/amd64,linux/arm64/v8 --push .```
 
 ![Screen](zad1_dod_2.JPG)
